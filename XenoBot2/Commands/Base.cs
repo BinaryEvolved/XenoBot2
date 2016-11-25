@@ -113,11 +113,9 @@ namespace XenoBot2.Commands
 
             builder.AppendLine($"Required Permissions: {cmd.Permission}");
 
-            if (!string.IsNullOrWhiteSpace(helptext))
-            {
-                builder.Append(" -> ");
-                builder.AppendLine(helptext);
-            }
+            if (string.IsNullOrWhiteSpace(helptext)) return builder.ToString();
+            builder.Append(" -> ");
+            builder.AppendLine(helptext);
 
             return builder.ToString();
         }
