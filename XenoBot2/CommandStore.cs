@@ -5,8 +5,8 @@ using XenoBot2.Shared;
 
 namespace XenoBot2
 {
-	internal class CommandStore : IEnumerable<KeyValuePair<string,Command>>
-	{
+    internal class CommandStore : IEnumerable<KeyValuePair<string, Command>>
+    {
 		private readonly IDictionary<string, Command> _commands;
 
 		public Command this[string id] => _commands[id.ToLower()];
